@@ -17,11 +17,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @SpringBootTest
 class DemoApplicationTests {
 
-	@MockBean
+	@Autowired
 	UserRepository userRepository;
 
 
-	//@BeforeEach
+	@BeforeEach
 	void saveUsers(){
 
 		System.out.println(userRepository.count());
@@ -41,13 +41,13 @@ class DemoApplicationTests {
 
 	@Test
 	void loadUserByUsername() {
-		when(userRepository.findByUsername("tudor1")).thenReturn(new User(1,"tudor1","root1"));
+//		when(userRepository.findByUsername("tudor1")).thenReturn(new User(1,"tudor1","root1"));
 
 		assertEquals(new User(1, "tudor1", "root1"), userRepository.findByUsername("tudor1"));
 	}
 
 
-	//@AfterEach
+	@AfterEach
 	void deleteAll(){
 
 		userRepository.deleteAll();
