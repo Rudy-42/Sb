@@ -20,6 +20,7 @@ import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 @SpringBootTest
+@Disabled
 class ControllerTest {
     @MockBean
     UserRepository repository;
