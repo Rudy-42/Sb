@@ -43,6 +43,8 @@ class DemoApplicationTests {
 	void loadUserByUsername() {
 //		when(userRepository.findByUsername("tudor1")).thenReturn(new User(1,"tudor1","root1"));
 
+		System.out.println("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
+
 		assertEquals(new User(1, "tudor1", "root1"), userRepository.findByUsername("tudor1"));
 	}
 
